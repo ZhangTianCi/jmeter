@@ -118,6 +118,9 @@ buildscript {
         }
     }
     repositories {
+        maven {
+            url = uri("https://maven.aliyun.com/repository/central")
+        }
         gradlePluginPortal()
     }
 }

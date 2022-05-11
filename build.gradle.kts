@@ -31,6 +31,7 @@ import org.sonarqube.gradle.SonarQubeProperties
 
 plugins {
     java
+    maven
     jacoco
     checkstyle
     id("org.jetbrains.gradle.plugin.idea-ext") apply false
@@ -274,6 +275,9 @@ allprojects {
     repositories {
         // RAT and Autostyle dependencies
         mavenCentral()
+        maven {
+            url = uri("https://maven.aliyun.com/repository/central")
+        }
     }
 
     // JMeter ClassFinder parses "class.path" and tries to find jar names there,
@@ -517,7 +521,8 @@ allprojects {
                         filter(org.apache.tools.ant.filters.EscapeUnicode::class)
                         filter(LineEndings.LF)
                     } else if (name.endsWith(".dtd") || name.endsWith(".svg") ||
-                        name.endsWith(".txt")) {
+                        name.endsWith(".txt")
+                    ) {
                         filter(LineEndings.LF)
                     }
                 }
