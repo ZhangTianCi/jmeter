@@ -25,11 +25,17 @@ plugins {
 }
 
 repositories {
+    maven {
+        setUrl("https://maven.aliyun.com/repository/public/")
+    }
     gradlePluginPortal()
 }
 
 allprojects {
     repositories {
+        maven {
+            setUrl("https://maven.aliyun.com/repository/public/")
+        }
         gradlePluginPortal()
     }
     applyKotlinProjectConventions()

@@ -276,6 +276,9 @@ allprojects {
 
     repositories {
         // RAT and Autostyle dependencies
+        maven {
+            setUrl("https://maven.aliyun.com/repository/public/")
+        }
         mavenCentral()
     }
 
@@ -533,6 +536,9 @@ allprojects {
         }
 
         repositories {
+            maven {
+                setUrl("https://maven.aliyun.com/repository/public/")
+            }
             mavenCentral()
         }
 

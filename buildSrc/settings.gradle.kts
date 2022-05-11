@@ -49,6 +49,9 @@ buildscript {
         }
     }
     repositories {
+        maven {
+            setUrl("https://maven.aliyun.com/repository/public/")
+        }
         gradlePluginPortal()
     }
 }
